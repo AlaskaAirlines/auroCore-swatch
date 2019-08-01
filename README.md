@@ -6,7 +6,7 @@
 
 # \<ods-swatch>
 
-\<ods-swatch> is a wrapper component for a HTML \<swatch> element containing styling and behavior.
+\<ods-swatch> is a UI component for the display of color information containing styling and behavior.
 
 ## Docs
 
@@ -39,7 +39,7 @@ import "@alaskaairux/ods-swatch/dist/ods-swatch";
 **Reference component in HTML**
 
 ```html
-<ods-swatch>Hello World</ods-swatch>
+<ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
 ```
 
 ## Element \<ods-swatch>
@@ -48,42 +48,25 @@ import "@alaskaairux/ods-swatch/dist/ods-swatch";
 class Odsswatch extends LitElement
 ```
 
-### Styling (experimental)
-
-Option(s) for component customization
-
-| Selector | Type | State | Description |
-|----|----|----|---|
-| ::part() | pseudo-element | experimental | Update shadowDOM CSS from outside the component |
-
-### swatch use cases
+### \<ods-swatch> use cases
 
 The \<ods-swatch> element should be used in situations where users may:
 
-* action
-* action
-* action
+* Need to illustrate a Design Token color and its related data
 
 ### Properties:
 
 | Attribute | Value type | Description |
 |----|----|----|
-| attr | string, boolean, function | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. |
+| backgroundcolor | string | pass in hex color value to be illustrated in the color swatch |
+| colorname | string | derived color name based on JSON structure from design tokens |
 
 ### API Code Examples
 
 Default swatch
 
 ```html
-<ods-swatch>Hello World</ods-swatch>
-```
-
-### React Custom callbacks
-
-swatch(React support) with `ref` for passing in an event, [see notes](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/CALLBACK.md)
-
-```html
-<ods-swatch ref={this.event}>hello world</ods-swatch>
+<ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
 ```
 
 ## Alternate build solutions
