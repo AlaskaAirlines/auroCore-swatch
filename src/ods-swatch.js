@@ -71,12 +71,12 @@ class OdsSwatch extends LitElement {
       ${styleCss}
 
       <div class="outerContainer">
-        <div class="colorSwatch" style="background-color: #${this.backgroundcolor};">
+        <div class="colorSwatch" style="background-color: ${this.backgroundcolor};">
           <div class="swatchProperties" style="color: ${this.a11yColor(this.backgroundcolor)}">
             <p>${this.varName(this.colorname, 'token')}</p>
             <p>${this.varName(this.colorname, 'css')}</p>
             <p>${this.varName(this.colorname, 'sass')}</p>
-            <p>#${this.backgroundcolor}</p>
+            <p>${this.backgroundcolor}</p>
           </div>
         </div>
 
