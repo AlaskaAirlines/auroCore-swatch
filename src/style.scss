@@ -30,10 +30,15 @@
 //   ...
 // }
 
+.outerContainer {
+  overflow: auto;
+}
+
 .swatchProperties {
   padding: var(--size-scale-max) var(--size-scale-med) var(--size-scale-med);
   p {
     margin: var(--size-scale-micro);
+    white-space: nowrap;
   }
 
   span {
