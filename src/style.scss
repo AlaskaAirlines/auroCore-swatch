@@ -34,8 +34,14 @@
   overflow: auto;
 }
 
+.colorSwatch {
+  padding: 0 var(--size-scale-med)
+}
+
 .swatchProperties {
-  padding: var(--size-scale-max) var(--size-scale-med) var(--size-scale-med);
+  padding: var(--size-scale-max) 0 var(--size-scale-med);
+  overflow: auto;
+
   p {
     margin: var(--size-scale-micro);
     white-space: nowrap;
