@@ -33,7 +33,7 @@ CSS Custom Properties are not supported in older browsers. For this, fallback pr
 Define the component dependency within each component that is using the \<ods-swatch> component.
 
 ```javascript
-import "@alaskaairux/ods-swatch/dist/ods-swatch";
+import "@alaskaairux/ods-swatch";
 ```
 
 **Reference component in HTML**
