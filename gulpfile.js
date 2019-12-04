@@ -25,7 +25,8 @@ const gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   removeSelectors = require('postcss-remove-selectors'),
   StyleDictionary = require('style-dictionary'),
-  copyfiles = require('copyfiles');
+  copyfiles = require('copyfiles'),
+  selectorReplace = require('postcss-selector-replace');
 
 // task to copy font files from the OWCSS npm to the local project
 // resources are NOT to be committed to version control
@@ -145,7 +146,7 @@ gulp.task('processImportsCanonical', function() {
       )
 
       // Output final CSS in destination
-      .pipe(gulp.dest('./src/altImports/canonical/'))
+      .pipe(gulp.dest('./altImports/canonical/'))
   );
 });
 
@@ -177,7 +178,7 @@ gulp.task('processImportsVariable', function() {
       )
 
       // Output final CSS in destination
-      .pipe(gulp.dest('./src/altImports/variable/'))
+      .pipe(gulp.dest('./altImports/variable/'))
   );
 });
 
@@ -208,6 +209,24 @@ gulp.task('processDev', function() {
       // Output final CSS in destination
       .pipe(gulp.dest('./src/'))
   );
+});
+
+// task for Development Sass processing
+gulp.task('reprocessClean', function() {
+  // set path to where Sass files are located to be processed
+  return gulp.src('./altImports/**/*.scss')
+
+    // PostCss polyfill pipeline for CSS Custom Properties (CSS variables)
+    .pipe(postcss([
+
+      selectorReplace({
+        before: [":host", "&(:not(.is-touching))", "&(.focus-visible)"],
+        after: ["&", "&:not(.is-touching)", "&.focus-visible"],
+      })
+    ]))
+
+    // Output final CSS in destination
+    .pipe(gulp.dest('./altImports/'));
 });
 
 // Sass watcher

@@ -39,11 +39,13 @@ class OdsSwatch extends LitElement {
 
   varName(name, type) {
     let dash = '-'
+
     if (type === 'token') {
       dash = '.'
     }
 
     const convertedName = name.match(/[A-Z][a-z]+/g).join(`${dash}`).toLowerCase()
+
     if (type === 'css') {
       return `var(--${convertedName})`
     } else if (type === 'sass') {
