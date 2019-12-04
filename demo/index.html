@@ -13,7 +13,7 @@
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
     <script type="module" src="../src/ods-swatch.js"></script>
-    <script type="module" src="../src/auro-listing-color.js"></script>
+    <script type="module" src="../src/auro-swatch-list.js"></script>
     <script src="../demo/alert.js"></script>
     <script type="module">
       import '../node_modules/@polymer/iron-icons/hardware-icons.js';
@@ -61,31 +61,24 @@
         </span>
       </p>
 
+      <h2 class="heading heading--xl">ods-swatch</h2>
       <demo-snippet>
         <template>
-          <ods-swatch backgroundcolor="#fff000" colorname="ColorBaseOrcaMegaLongColorspecOfThings"></ods-swatch>
+          <ods-swatch backgroundcolor="#fff000" colorname="color-brand-atlas-100"></ods-swatch>
         </template>
       </demo-snippet>
 
+      <h2 class="heading heading--xl">auro-swatch-list</h2>
       <demo-snippet>
         <template>
-          <auro-listing-color backgroundcolor="#ffa500" colorname="ColorBaseYellowOrangeHover"></auro-listing-color>
+          <auro-swatch-list componentData='[
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-100", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-300", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-400", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
+          ]'></auro-swatch-list>
         </template>
       </demo-snippet>
-
-      <h2>Element &#60;ods-swatch&#62;</h2>
-
-      <pre><code>class OdsSwatch extends LitElement</code></pre>
-
-      <h3>Styling:</h3>
-      <p>Info ...</p>
-
-      <h3>Responsive state:</h3>
-      <p>Info ...</p>
-
-      <h3>Properties:</h3>
-      <code><strong>string:</strong> string</code>
-      <p>Info ...</p>
     </div>
   </body>
 </html>

@@ -1,0 +1,96 @@
+// Copyright (c) Alaska Air. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Creates ods-swatch CSS UI definition of shape
+
+// Import pre-processed Orion Design Tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenProperties";
+
+// Importing Auro Design Tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SCSSVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/SassCustomProperties";
+
+// Import local build shape tokens
+@import "./tokens/componentShapeVariables";
+@import "./tokens/componentShapeProperties";
+
+// Import OWCSS resources
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
+@import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
+
+:host([darkmode]) {
+  .tableListing {
+    background-color: var(--auro-color-background-darkest);
+    color: var(--auro-color-text-primary-on-dark);
+    outline: var(--auro-size-md) solid var(--auro-color-background-darkest);
+
+    th {
+      color: var(--auro-color-text-primary-on-dark);
+      border-bottom-color: var(--auro-color-border-primary-on-dark);
+    }
+
+    td {
+      border-bottom-color: var(--auro-color-border-primary-on-dark);
+    }
+  }
+}
+
+.varList {
+  line-height: var(--auro-unitless-scale-200);
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.tableListing {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--auro-size-xxl);
+
+  tbody {
+    font-size: var(--auro-text-body-size-sm);
+    font-weight: 200;
+  }
+
+  th {
+    border-bottom: 2px solid var(--auro-color-border-primary-on-light);
+    color: var(--auro-color-text-secondary-on-light);
+    padding: 0 0 var(--auro-size-sm);
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding-right: var(--auro-size-xxl);
+  }
+
+  td {
+    padding: var(--auro-size-md) var(--auro-size-xxl) var(--auro-size-sm) 0;
+    border-bottom: 1px solid var(--auro-color-border-primary-on-light);
+  }
+
+  thead {
+    text-align: left;
+  }
+}
+
+.noPadding {
+  padding-right: 0 !important;
+}
+
+.center {
+  text-align: center;
+}
+
+.swatch {
+  div {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+}

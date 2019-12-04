@@ -5,13 +5,15 @@
 
 // Creates ods-swatch CSS UI definition of shape
 
-// Boilerplate Sass imports
-@import "./tokens/tokenVariables";
-@import "./tokens/componentShapeVariables";
+// Import pre-processed Orion Design Tokens
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenProperties";
 
-@import "./tokens/tokenProperties";
+// Import local build shape tokens
+@import "./tokens/componentShapeVariables";
 @import "./tokens/componentShapeProperties";
 
+// Import OWCSS resources
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
 
