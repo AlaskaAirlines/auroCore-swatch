@@ -1,7 +1,7 @@
 
-// Import generated Design Token variables
-@import "./demo/sass/tokenVariables";
-@import "./demo/sass/tokenProperties";
+// Import generated legacy Design Token variables
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenProperties";
 
 // Import baseline library dependencies
 // Mixins
