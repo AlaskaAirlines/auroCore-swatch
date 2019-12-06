@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [1.1.0](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.0.4...v1.1.0) (2019-12-06)
+
+
+### Bug Fixes
+
+* typo in Sass file ([e7403bb](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/e7403bb))
+
+
+### Features
+
+* break out component base, add new auro swatch list component ([bfe0db1](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/bfe0db1))
+
 ## [1.0.4](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.0.3...v1.0.4) (2019-10-18)
 
 
