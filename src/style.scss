@@ -6,8 +6,8 @@
 // Creates ods-swatch CSS UI definition of shape
 
 // Import pre-processed Orion Design Tokens
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenVariables";
-@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/tokenProperties";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenVariables";
+@import "./node_modules/@alaskaairux/orion-design-tokens/dist/tokens/TokenProperties";
 
 // Import local build shape tokens
 @import "./tokens/componentShapeVariables";
