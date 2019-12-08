@@ -14,6 +14,7 @@
     </script>
     <script type="module" src="../src/ods-swatch.js"></script>
     <script type="module" src="../src/auro-swatch-list.js"></script>
+    <script type="module" src="../src/auro-color-avatar.js"></script>
     <script src="../demo/alert.js"></script>
     <script type="module">
       import '../node_modules/@polymer/iron-icons/hardware-icons.js';
@@ -77,6 +78,31 @@
             { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-300", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
             { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-400", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
           ]'></auro-swatch-list>
+        </template>
+      </demo-snippet>
+
+      <h2 class="heading heading--xl">auro-color-avatar</h2>
+      <demo-snippet>
+        <template>
+          <div class="displayWrapper">
+            <auro-color-avatar avatartype="font" colorname='color-text-primary-on-light'></auro-color-avatar>
+            <auro-color-avatar avatartype="font" ondark colorname='color-text-primary-on-dark'></auro-color-avatar>
+            <auro-color-avatar avatartype="border" colorname='color-border-error-on-light'></auro-color-avatar>
+            <auro-color-avatar avatartype="border" ondark colorname='color-border-error-on-dark'></auro-color-avatar>
+            <auro-color-avatar avatartype="alert" colorname='color-alert-success-on-light'></auro-color-avatar>
+            <auro-color-avatar avatartype="alert" ondark colorname='color-alert-success-on-dark'></auro-color-avatar>
+            <auro-color-avatar avatartype="ui" colorname='color-ui-default-on-light'></auro-color-avatar>
+            <auro-color-avatar avatartype="ui" ondark colorname='color-ui-default-on-dark'></auro-color-avatar>
+            <auro-color-avatar avatartype="icon" colorname='color-ui-default-on-light'></auro-color-avatar>
+            <auro-color-avatar avatartype="icon" ondark colorname='color-ui-default-on-dark'></auro-color-avatar>
+          </div>
+        </template>
+      </demo-snippet>
+
+      <demo-snippet>
+        <template>
+          <auro-color-avatar colorname='color-border-error-on-light'></auro-color-avatar>
+          <auro-color-avatar ondark colorname='color-border-error-on-dark'></auro-color-avatar>
         </template>
       </demo-snippet>
     </div>
