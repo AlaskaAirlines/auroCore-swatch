@@ -1,0 +1,112 @@
+:host {
+  > * {
+    --size-icon-square-lg: 3rem;
+  }
+
+  display: flex;
+  align-items: center;
+  padding: var(--auro-size-sm) 0;
+}
+
+:host([ondark]) {
+  .avatar {
+    background-color: var(--auro-color-background-darker);
+  }
+
+  .alertBox {
+    background-color: transparent;
+  }
+
+  .avatar--color {
+    box-shadow: inset 0 0 var(--auro-size-xxxs) var(--auro-size-xs) var(--auro-color-background-darker);
+  }
+
+  .uiBox {
+    &::after {
+      background-color: var(--auro-color-background-darker);
+    }
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.avatarWrapper {
+  margin-right: var(--auro-size-md);
+}
+
+.avatarToken {
+  font-weight: 200;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+
+  position: relative;
+  background-color: var(--auro-color-background-lighter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(2.5rem at center);
+  font-size: var(--auro-size-xl);
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: calc(5rem - 2px);
+    height: calc(5rem - 2px);
+    border-radius: 50%;
+    border: 1px solid var(--auro-color-border-primary-on-light);
+    z-index: 100;
+  }
+}
+
+.icon {
+  height: var(--auro-size-xs);
+  width: 80%;
+  border-radius: var(--auro-size-xxs);
+  margin-right: -40%;
+}
+
+.uiBox,
+.alertBox {
+  height: 40px;
+  position: relative;
+  background-color: inherit;
+
+  // inset image
+  &::after {
+    position: absolute;
+    content: "";
+
+    height: var(--auro-size-xs);
+    width: 80%;
+    background-color: var(--auro-color-background-lighter);
+    border-radius: var(--auro-size-xxs);
+    top: calc(50% - var(--auro-size-xxs));
+    left: 40%;
+  }
+}
+
+.alertBox {
+  background-color: white;
+  height: 30px;
+  border-width: 1px 0 1px var(--auro-size-xxs);
+  border-style: solid;
+
+  // inset image
+  &::after {
+    height: var(--auro-size-sm);
+    width: var(--auro-size-sm);
+    background-color: inherit;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    top: calc(50% - var(--auro-size-xs));
+    left: 15%;
+  }
+}

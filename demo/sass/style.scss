@@ -28,3 +28,12 @@ code {
   margin: 0 auto;
   max-width: var(--size-width-max);
 }
+
+.displayWrapper {
+  display: flex;
+  flex-wrap: wrap;
+
+  auro-color-avatar {
+    flex-basis: 33%
+  }
+}
