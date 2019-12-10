@@ -4,7 +4,6 @@
 // ---------------------------------------------------------------------
 
 import { html } from "lit-element";
-import { ifDefined } from 'lit-html/directives/if-defined.js';
 import ComponentBase from './component-base';
 import styleCss from "./style-color-avatar-css.js";
 import iconProperties from '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties-css.js';
