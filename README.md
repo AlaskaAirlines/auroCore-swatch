@@ -4,7 +4,7 @@
 
 # \<ods-swatch>
 
-\<ods-swatch> is a UI component for the display of color information containing styling and behavior.
+`<ods-swatch>` is a UI component for the display of color information containing styling and behavior.
 
 ## Docs
 
@@ -40,17 +40,19 @@ import "@alaskaairux/ods-swatch";
 <ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
 ```
 
-## Element \<ods-swatch>
+## Element ods-swatch
 
 ```javascript
-class Odsswatch extends LitElement
+class OdsSwatch extends ComponentBase
 ```
 
-### \<ods-swatch> use cases
+### ods-swatch use cases
 
-The \<ods-swatch> element should be used in situations where users may:
+The `<ods-swatch>` element should be used in situations where users may:
 
-* Need to illustrate a Design Token color and its related data
+* Need to illustrate a Design Token color and its related data in a block swatch format.
+* Supports display of color as background color
+* Lists JSON token value; CSS custom property; Sass variable; HEX value
 
 ### Properties:
 
@@ -59,7 +61,7 @@ The \<ods-swatch> element should be used in situations where users may:
 | backgroundcolor | string | pass in hex color value to be illustrated in the color swatch |
 | colorname | string | derived color name based on JSON structure from design tokens |
 
-### API Code Examples
+### Code Examples
 
 Default swatch
 
@@ -67,52 +69,89 @@ Default swatch
 <ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
 ```
 
-## Alternate build solutions
+## Element auro-swatch-list
 
-Included with the distributed npm are two additional directories, `./altImportsCanonical` and `./altImportsVariable`.
-
-| directory | description |
-|---|---|
-| altImportsCanonical† | Sass using canonical values within the scope of the file |
-| altImportsVariable* | Sass using CSS Custom Properties within the scope of the file |
-
-† Using canonical CSS properties breaks inheritance chain from Orion Design Tokens
-
-\* Orion Design Tokens are required to import any file using CSS Custom Properties. Also see Orion Design Tokens [pre-processed resources](https://github.com/AlaskaAirlines/OrionDesignTokens#install-pre-processed-resources). PostCSS using `postcss-custom-properties` will need to be added to your project if you are supporting legacy browsers.
-
-Within the respective directories is the `style_clean.scss` file.
-
-```bash
-├── altImports
-|  ├── canonical
-|  |  ├── style.css
-|  |  └── style_clean.scss
-|  └── variable
-|     ├── style.css
-|     └── style_clean.scss
+```javascript
+class AuroSwatchList extends ComponentBase 
 ```
 
-It is highly recommended that you import the `style_clean.scss` this into a name-space as not to create style collisions. For example:
+### auro-swatch-list use cases
 
-```scss
-.ods-swatch {
-  @import "./node_modules/@alaskaairux/ods-swatch/altImports/variable/style_clean.scss";
-}
+The `<auro-swatch-list>` element should be used in situations where users may:
+
+* Need to illustrate a Design Token color and its related data
+* Display data in table format
+* Displays CSS custom property name
+* Displays Sass variable name
+* Describes color usage and WCAG rating
+* Displays color in circular inkwell
+* Displays color HEX or RGBA value
+
+### Properties:
+
+| Attribute | Value type | Description |
+|----|----|----|
+| componentData | array | pass in `backgroundcolor`, `colorname`, `wcag`, `usage` |
+
+### Code Examples
+
+```html
+<auro-swatch-list componentData='[
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-100", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-300", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-400", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
+  ]'></auro-swatch-list>
 ```
 
-This pattern will produce all the selectors within `style_clean.scss` with the prefixed selector.
+## Element auro-swatch-list
 
-```scss
-.ods-swatch .swatch {
-  display: var(--ods-swatch-display);
-  font-family: var(--ods-swatch-font-family);
-  border-width: var(--ods-swatch-border-width);
-  border-radius: var(--ods-swatch-border-radius);
-  ...
-}
+```javascript
+class AuroSwatchList extends ComponentBase 
 ```
 
-**Warning!** Using the canonical CSS will break the chain of using Design Tokens. If Tokens are updated, this will require the update of the components and their canonical output. Use with caution.
+### auro-color-avatar use cases
+
+The `<auro-color-avatar>` element should be used in situations where users may:
+
+* Need to illustrate a Design Token color and its related data
+* Use illustrative avatar to display color listing
+* Need to illustrate between text, border, alert, interactive or icon uses
+
+### Properties:
+
+| Attribute | Value type | Description |
+|----|----|----|
+| avatartype | string | pass in `font`, `border`, `alert`, `ui`, `icon` string to illustrate preferred avatar type |
+| colorname | string | pass in `-` (dash) delimitated name of color token |
+| ondark | boolean | defines if color state is to be on-dark |
+
+### Code Examples
+
+```html
+<auro-color-avatar avatartype="font" colorname="color-text-primary-on-light"></auro-color-avatar>
+<auro-color-avatar avatartype="font" ondark colorname="color-text-primary-on-dark"></auro-color-avatar>
+```
+
+```html
+<auro-color-avatar avatartype="border" colorname="color-border-error-on-light"></auro-color-avatar>
+<auro-color-avatar avatartype="border" ondark colorname="color-border-error-on-dark"></auro-color-avatar>
+```
+
+```html
+<auro-color-avatar avatartype="alert" colorname="color-alert-success-on-light"></auro-color-avatar>
+<auro-color-avatar avatartype="alert" ondark colorname="color-alert-success-on-dark"></auro-color-avatar>
+```
+
+```html
+<auro-color-avatar avatartype="ui" colorname="color-ui-default-on-light"></auro-color-avatar>
+<auro-color-avatar avatartype="ui" ondark colorname="color-ui-default-on-dark"></auro-color-avatar>
+```
+
+```html
+<auro-color-avatar avatartype="icon" colorname="color-ui-default-on-light"></auro-color-avatar>
+<auro-color-avatar avatartype="icon" ondark colorname="color-ui-default-on-dark"></auro-color-avatar>
+```
 
 ##
 
