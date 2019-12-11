@@ -69,6 +69,47 @@ Default swatch
 <ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
 ```
 
+## Element auro-token-list
+
+```javascript
+class AuroTokenList extends ComponentBase 
+```
+
+### auro-token-list use cases
+
+The `<auro-token-list>` element should be used in situations where users may:
+
+* Display table of design token name and value
+* Display alternate table of deprecated tokens with optional new reference token name
+
+### Properties:
+
+| Attribute | Value type | Description |
+|----|----|----|
+| componentData | array | pass in `tokenvalue`, `token` |
+| unit | string | pass in unit that is to be displayed with token value if needed |
+| deprecated | boolean | use deprecated display table |
+
+### Code Examples
+
+```html
+<auro-tokens-list componentData='[
+  { "tokenvalue": "480px", "token": "breakpoint-width-narrow" }
+]'></auro-tokens-list>
+```
+
+```html
+<auro-tokens-list unit="rem" componentData='[
+  { "tokenvalue": "1.5", "token": "breakpoint-width-narrow" }
+]'></auro-tokens-list>
+```
+
+```html
+<auro-tokens-list deprecated componentData='[
+  { "tokenvalue": "480px", "token": "breakpoint-width-narrow", "reference": "breakpoint-sm" }
+]'></auro-tokens-list>
+```
+
 ## Element auro-swatch-list
 
 ```javascript
@@ -92,22 +133,28 @@ The `<auro-swatch-list>` element should be used in situations where users may:
 | Attribute | Value type | Description |
 |----|----|----|
 | componentData | array | pass in `backgroundcolor`, `colorname`, `wcag`, `usage` |
+| ondark | boolean | defines if color state is to be on-dark |
 
 ### Code Examples
 
 ```html
 <auro-swatch-list componentData='[
   { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-100", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
-  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
-  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-300", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
-  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-400", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
   ]'></auro-swatch-list>
 ```
 
-## Element auro-swatch-list
+```html
+<auro-swatch-list ondark componentData='[
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-100", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+  { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
+  ]'></auro-swatch-list>
+```
+
+## Element auro-color-avatar
 
 ```javascript
-class AuroSwatchList extends ComponentBase 
+class AuroColorAvatar extends ComponentBase 
 ```
 
 ### auro-color-avatar use cases
@@ -141,16 +188,6 @@ The `<auro-color-avatar>` element should be used in situations where users may:
 ```html
 <auro-color-avatar avatartype="alert" colorname="color-alert-success-on-light"></auro-color-avatar>
 <auro-color-avatar avatartype="alert" ondark colorname="color-alert-success-on-dark"></auro-color-avatar>
-```
-
-```html
-<auro-color-avatar avatartype="ui" colorname="color-ui-default-on-light"></auro-color-avatar>
-<auro-color-avatar avatartype="ui" ondark colorname="color-ui-default-on-dark"></auro-color-avatar>
-```
-
-```html
-<auro-color-avatar avatartype="icon" colorname="color-ui-default-on-light"></auro-color-avatar>
-<auro-color-avatar avatartype="icon" ondark colorname="color-ui-default-on-dark"></auro-color-avatar>
 ```
 
 ##
