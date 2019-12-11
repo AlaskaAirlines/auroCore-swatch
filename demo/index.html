@@ -82,11 +82,25 @@
         </template>
       </demo-snippet>
 
+      <demo-snippet>
+        <template>
+          <auro-swatch-list ondark componentData='[
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-100", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-200", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-300", "wcag": "AAA", "usage": "Notification color on light backgrounds" },
+            { "backgroundcolor": "#0074c8", "colorname": "color-brand-atlas-400", "wcag": "AAA", "usage": "Notification color on light backgrounds" }
+          ]'></auro-swatch-list>
+        </template>
+      </demo-snippet>
+
       <h2 class="heading heading--xl">auro-tokens-list</h2>
       <demo-snippet>
         <template>
           <auro-tokens-list componentData='[
-            { "tokenvalue": "480px", "token": "breakpoint-width-narrow", "reference": "breakpoint-sm" }
+            { "tokenvalue": "480px", "token": "breakpoint-width-narrow" }
+          ]'></auro-tokens-list>
+          <auro-tokens-list unit="rem" componentData='[
+            { "tokenvalue": "1.5", "token": "breakpoint-width-narrow" }
           ]'></auro-tokens-list>
         </template>
       </demo-snippet>

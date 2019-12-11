@@ -21,7 +21,7 @@
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/breakpoints";
 @import "./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/baselineLTE";
 
-:host([darkmode]) {
+:host([ondark]) {
   .tableListing {
     background-color: var(--auro-color-background-darkest);
     color: var(--auro-color-text-primary-on-dark);
