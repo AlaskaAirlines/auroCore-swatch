@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [1.2.0](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.1.0...v1.2.0) (2019-12-11)
+
+
+### Features
+
+* add new auro-color-avatar element ([93dc4cc](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/93dc4cc))
+* add tokens list component ([654a3f2](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/654a3f2))
+
 # [1.1.0](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.0.4...v1.1.0) (2019-12-06)
 
 
