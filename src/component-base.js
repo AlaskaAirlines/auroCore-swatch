@@ -26,6 +26,10 @@ export default class ComponentBase extends LitElement {
       dash = '.'
     }
 
+    if (type === 'deprecated') {
+      return `var(--${name})`
+    }
+
     if (type === 'css') {
       return `var(--auro-${name})`
     }

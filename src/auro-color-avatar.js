@@ -7,13 +7,13 @@ import { html } from "lit-element";
 import ComponentBase from './component-base';
 import styleCss from "./style-color-avatar-css.js";
 import iconProperties from '@alaskaairux/orion-icons/dist/tokens/CSSTokenProperties-css.js';
-import locationFilles from '@alaskaairux/orion-icons/dist/icons/interface/location-filled_es6.js';
+import locationFilled from '@alaskaairux/orion-icons/dist/icons/interface/location-filled_es6.js';
 
 class AuroColorAvatar extends ComponentBase {
 
   constructor() {
     super();
-    this.dom = new DOMParser().parseFromString(locationFilles.svg, 'text/html');
+    this.dom = new DOMParser().parseFromString(locationFilled.svg, 'text/html');
     this.svg = this.dom.body.firstChild;
   }
 
