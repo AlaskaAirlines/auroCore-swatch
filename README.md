@@ -87,7 +87,6 @@ The `<auro-token-list>` element should be used in situations where users may:
 | Attribute | Value type | Description |
 |----|----|----|
 | componentData | array | pass in `tokenvalue`, `token` |
-| unit | string | pass in unit that is to be displayed with token value if needed |
 | deprecated | boolean | use deprecated display table |
 
 ### Code Examples
@@ -95,12 +94,6 @@ The `<auro-token-list>` element should be used in situations where users may:
 ```html
 <auro-tokens-list componentData='[
   { "tokenvalue": "480px", "token": "breakpoint-width-narrow" }
-]'></auro-tokens-list>
-```
-
-```html
-<auro-tokens-list unit="rem" componentData='[
-  { "tokenvalue": "1.5", "token": "breakpoint-width-narrow" }
 ]'></auro-tokens-list>
 ```
 

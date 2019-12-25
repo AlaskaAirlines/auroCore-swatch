@@ -18,6 +18,12 @@ class AuroTokensList extends ComponentBase {
     };
   }
 
+  _size(arg) {
+    if (arg.includes("size")) {
+      return 'rem'
+    }
+  }
+
   // Adds styles for light DOM element; styles not defined in base class
   render() {
     return html`
@@ -64,7 +70,7 @@ class AuroTokensList extends ComponentBase {
                   ${this.varName(i.token, 'css')}
                 </td>
                 <td class="noWrap">
-                  ${i.tokenvalue}${this.unit}
+                  ${i.tokenvalue}${this._size(i.token)}
                 </td>
               </tr>
             `)}
