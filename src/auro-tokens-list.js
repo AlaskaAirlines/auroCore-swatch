@@ -46,8 +46,8 @@ class AuroTokensList extends ComponentBase {
                   ${this.varName(i.token, 'deprecated')}
                 </td>
                 ${i.reference === 'n/a' ?
-                  html`<td>${i.reference}</td>` :
-                  (i.reference ? html`<td>var(--auro-${i.reference})</td>` :
+                  html`<td class="noWrap">${i.reference}</td>` :
+                  (i.reference ? html`<td class="noWrap">var(--auro-${i.reference})</td>` :
                   html`<td></td>`
                   )
                 }
