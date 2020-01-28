@@ -1,5 +1,26 @@
 # Semantic Release Automated Changelog
 
+## [1.2.3](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.2...v1.2.3) (2020-01-16)
+
+
+### Bug Fixes
+
+* minor update to white-space breaking ([fb8e197](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/fb8e197))
+
+## [1.2.2](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.1...v1.2.2) (2020-01-15)
+
+
+### Bug Fixes
+
+* update support for deprecated references ([bfcbecc](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/bfcbecc))
+
+## [1.2.1](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.0...v1.2.1) (2020-01-07)
+
+
+### Bug Fixes
+
+* [#7](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/issues/7) address issues with units ([781a57f](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/781a57f))
+
 # [1.2.0](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.1.0...v1.2.0) (2019-12-11)
 
 
