@@ -11,54 +11,59 @@ export default class ComponentBase extends LitElement {
 
   varName(name, type) {
 
-    function camelCase(str) {
-      str = str.replace(/-/g, " ")
+    const camelCase = (str) => {
+      const cleanStr = str.replace(/-/gu, " ");
 
-      return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index)
-      {
-        return index == 0 ? word.toUpperCase() : word.toUpperCase();
-      }).replace(/\s+/g, '');
+      return cleanStr.replace(/(?:^\w|[A-Z]|\b\w)/gu, (word) => word.toUpperCase()).replace(/\s+/gu, '');
     }
 
-    let dash = '-'
-
-    if (type === 'token') {
-      dash = '.'
-    }
-
-    if (type === 'deprecated') {
-      return `var(--${name})`
-    }
-
-    if (type === 'css') {
-      return `var(--auro-${name})`
-    }
-
-    else if (type === 'droid') {
-      return `auro_${name.replace(/-/g, "_")}`
-    }
-
-    else if (type === 'ios') {
-      return `Auro${camelCase(name)}`
-    }
-
-    else if (type === 'sass') {
-      return `$auro-${name}`
-    }
-
-    else {
-      return `{${name.replace(/-/g, ".")}.value}`
+    switch (type) {
+      case 'deprecated':
+        return `var(--${name})`;
+      case 'css':
+        return `var(--auro-${name})`
+      case 'droid':
+        return `auro_${name.replace(/-/gu, "_")}`
+      case 'ios':
+        return `Auro${camelCase(name)}`
+      case 'sass':
+        return `$auro-${name}`
+      default:
+        return `{${name.replace(/-/gu, ".")}.value}`
     }
   }
 
   a11yColor(bgColor) {
-    const lightColor = `var(--color-base-orca)`;
-    const darkColor = `var(--color-base-white)`;
-    const color = (bgColor.charAt(0) === '#') ? bgColor.substring(1, 7) : bgColor;
-    const r = parseInt(color.substring(0, 2), 16); // hexToR
-    const g = parseInt(color.substring(2, 4), 16); // hexToG
-    const b = parseInt(color.substring(4, 6), 16); // hexToB
+    const
+      blueBeginIndex = 4,
+      blueMultiplier = 0.114,
+      darkColor = `var(--color-base-white)`,
+      darknessThreshold = 186,
+      getColorCode = (color) => {
+        const
+          colorBeginIndex = 1,
+          colorEndIndex = 7,
+          hashLocation = 0;
 
-    return (((r * 0.299) + (g * 0.587) + (b * 0.114)) > 186) ? lightColor : darkColor;
+        return color.charAt(hashLocation) === '#' ? color.substring(colorBeginIndex, colorEndIndex) : color;
+      },
+      greenBeginIndex = 2,
+      greenMultiplier = 0.587,
+      hexToColor = (color, beginIndex, multiplier) => {
+        const
+          colorCode = getColorCode(color),
+          endIndex = 2,
+          hexValue = 16;
+
+        return parseInt(colorCode.substring(beginIndex, beginIndex + endIndex), hexValue) * multiplier;
+      },
+      lightColor = `var(--color-base-orca)`,
+      redBeginIndex = 0,
+      redMultiplier = 0.299;
+
+    return hexToColor(bgColor, redBeginIndex, redMultiplier) +
+        hexToColor(bgColor, greenBeginIndex, greenMultiplier) +
+        hexToColor(bgColor, blueBeginIndex, blueMultiplier) > darknessThreshold
+     ? lightColor : darkColor;
   }
 }
