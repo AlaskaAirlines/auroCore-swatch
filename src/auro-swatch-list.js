@@ -32,16 +32,16 @@ class AuroSwatchList extends ComponentBase {
           </tr>
         </thead>
         <tbody>
-          ${this.componentData.map(i => html`
+          ${this.componentData.map((index) => html`
             <tr>
               <td class="noWrap varList">
-                <b>CSS</b>: ${this.varName(i.colorname, 'css')}<br>
-                <b>Sass</b>: ${this.varName(i.colorname, 'sass')}
+                <b>CSS</b>: ${this.varName(index.colorname, 'css')}<br>
+                <b>Sass</b>: ${this.varName(index.colorname, 'sass')}
               </td>
-              <td>${i.usage}</td>
-              <td class="noWrap">${i.backgroundcolor}</td>
-              <td class="swatch"><div style="background-color: var(--auro-${i.colorname})"></div></td>
-              <td class="center noPadding">${i.wcag}</td>
+              <td>${index.usage}</td>
+              <td class="noWrap">${index.backgroundcolor}</td>
+              <td class="swatch"><div style="background-color: var(--auro-${index.colorname})"></div></td>
+              <td class="center noPadding">${index.wcag}</td>
             </tr>
           `)}
         </tbody>

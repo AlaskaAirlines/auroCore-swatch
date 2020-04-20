@@ -18,10 +18,22 @@ class AuroTokensList extends ComponentBase {
     };
   }
 
-  _size(arg) {
+  size(arg) {
     if (arg.includes("size")) {
       return 'rem'
     }
+
+    return '';
+  }
+
+  currentToken(reference) {
+    if (reference === 'n/a') {
+      return reference;
+    } else if (reference) {
+      return `var(--auro-${reference})`;
+    }
+
+    return ''
   }
 
   // Adds styles for light DOM element; styles not defined in base class
@@ -29,8 +41,8 @@ class AuroTokensList extends ComponentBase {
     return html`
       ${swatchStyleCss}
 
-      ${this.deprecated ?
-        html`
+      ${this.deprecated
+        ? html`
           <table class="tableListing tableListing-deprecated">
           <thead>
             <tr>
@@ -40,24 +52,19 @@ class AuroTokensList extends ComponentBase {
             </tr>
           </thead>
           <tbody>
-            ${this.componentData.map(i => html`
+            ${this.componentData.map((index) => html`
               <tr>
                 <td class="noWrap varList">
-                  ${this.varName(i.token, 'deprecated')}
+                  ${this.varName(index.token, 'deprecated')}
                 </td>
-                ${i.reference === 'n/a' ?
-                  html`<td class="noWrap">${i.reference}</td>` :
-                  (i.reference ? html`<td class="noWrap">var(--auro-${i.reference})</td>` :
-                  html`<td></td>`
-                  )
-                }
-                <td class="noWrap">${i.tokenvalue}</td>
+                ${html`<td class="noWrap">${this.currentToken(index.reference)}</td>`}
+                <td class="noWrap">${index.tokenvalue}</td>
               </tr>
             `)}
           </tbody>
-        </table>` :
+        </table>`
 
-        html`
+        : html`
           <table class="tableListing tableListing-standard">
           <thead>
             <tr>
@@ -66,13 +73,13 @@ class AuroTokensList extends ComponentBase {
             </tr>
           </thead>
           <tbody>
-            ${this.componentData.map(i => html`
+            ${this.componentData.map((index) => html`
               <tr>
                 <td class="noWrap varList">
-                  ${this.varName(i.token, 'css')}
+                  ${this.varName(index.token, 'css')}
                 </td>
                 <td class="noWrap">
-                  ${i.tokenvalue}${this._size(i.token)}
+                  ${index.tokenvalue}${this.size(index.token)}
                 </td>
               </tr>
             `)}
