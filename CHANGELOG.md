@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.4](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.3...v1.2.4) (2020-04-28)
+
+
+### Bug Fixes
+
+* remove breaking style ([ee82212](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/ee822124059bae9ffc06bd7e119500933d597fc5))
+
 ## [1.2.3](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.2...v1.2.3) (2020-01-16)
 
 
