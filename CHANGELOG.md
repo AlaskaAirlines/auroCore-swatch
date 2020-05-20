@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.2.5](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.4...v1.2.5) (2020-05-20)
+
+
+### Bug Fixes
+
+* update padding for onDark table ([c39367d](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/commit/c39367dbff9bbd3aa6fcfb537beac6d25196b2af))
+
 ## [1.2.4](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.3...v1.2.4) (2020-04-28)
 
 
