@@ -54,7 +54,7 @@
   }
 
   th {
-    border-bottom: 2px solid var(--auro-color-border-primary-on-light);
+    border-bottom: 1px solid var(--auro-color-border-primary-on-light);
     color: var(--auro-color-text-secondary-on-light);
     padding: 0 0 var(--auro-size-sm);
     white-space: nowrap;
@@ -62,11 +62,16 @@
 
   td {
     padding: var(--auro-size-md) var(--auro-size-xxl) var(--auro-size-sm) 0;
-    border-bottom: 1px solid var(--auro-color-border-primary-on-light);
   }
 
   thead {
     text-align: left;
+  }
+}
+
+.tableRow {
+  &:nth-child(even) {
+    background-color: var(--auro-color-base-gray-100);
   }
 }
 

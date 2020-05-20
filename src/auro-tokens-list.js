@@ -53,7 +53,7 @@ class AuroTokensList extends ComponentBase {
           </thead>
           <tbody>
             ${this.componentData.map((index) => html`
-              <tr>
+              <tr class="tableRow">
                 <td class="noWrap varList">
                   ${this.varName(index.token, 'deprecated')}
                 </td>
@@ -74,7 +74,7 @@ class AuroTokensList extends ComponentBase {
           </thead>
           <tbody>
             ${this.componentData.map((index) => html`
-              <tr>
+              <tr class="tableRow">
                 <td class="noWrap varList">
                   ${this.varName(index.token, 'css')}
                 </td>
