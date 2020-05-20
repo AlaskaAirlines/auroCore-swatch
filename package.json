@@ -8,28 +8,29 @@
     "",
     "# To build resources to view the demo file, perform the following tasks",
     "  1. $ gulp build",
-    "  2. $ npm run build",
-    "  3. $ polymer serve",
-    "  4. Go to http://127.0.0.1:8081",
+    "  2. $ npm run ciBuild",
+    "  3. $ npm run serve",
+    "  4. Go to http://localhost:3001",
     "",
     "# To work within the development environment, run the following tasks",
     "  1. $ gulp dev",
     "  2. $ npm run dev",
-    "  4. $ polymer serve",
-    "  3. Go to http://127.0.0.1:8081",
+    "  4. $ npm run serve",
+    "  3. Go to http://localhost:3001",
     "================================================================================"
   ],
-  "name": "@alaskaairux/ods-swatch",
+  "name": "@alaskaairux/auro-swatch",
   "version": "1.2.5",
-  "description": "Orion Design System swatch element",
+  "description": "Auro Design System swatch element",
   "author": "Product design and research",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch"
+    "url": "https://github.com/AlaskaAirlines/auro-swatch"
   },
   "main": "index.js",
   "license": "Apache-2.0",
   "dependencies": {
+    "chalk": "^4.0.0",
     "lit-element": "^2.3.1"
   },
   "peerDependencies": {
@@ -88,9 +89,10 @@
   "scripts": {
     "build": "npm-run-all sassRender cssLint jsonLint",
     "buildTokens": "node scripts/tokenScript.js",
-    "ciBuild": "npm-run-all buildTokens processSrc preserveTokens distTokens sassRender distJS",
+    "postinstall": "node packageScripts/postinstall.js",
+    "ciBuild": "npm-run-all buildTokens processSrc preserveTokens distTokens sassRender distJS postinstall",
     "copyFonts": "copyfiles -f ./node_modules/@alaskaairux/orion-web-core-style-sheets/dist/fonts/*.* ./demo/fonts/",
-    "cssLint": "stylelint './src/style.css'",
+    "cssLint": "stylelint './src/style-swatch-list.css'",
     "dev": "npm-watch buildTokens | npm-watch sassRender-w | npm-watch devBuild",
     "devBuild": "npm-run-all buildTokens processSrc distTokens sassRender distJS",
     "dist": "npm-run-all distTokens sassRender cssLint jsonLint",
@@ -100,6 +102,7 @@
     "jsonLint": "jsonlint -q ./src/shape.json",
     "sassRender": "sass-render src/*.css src/tokens/*.scss",
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
+    "serve": "polymer serve --port 3001 --hostname 0.0.0.0",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
     "test": "npm-run-all esLint cssLint jsonLint yamltest",
     "yamltest": "yamllint .travis.yml",
@@ -153,15 +156,11 @@
     {
       "name": "Kevin Sonnichsen",
       "email": "Kevin.Sonnichsen@alaskaair.com"
-    },
-    {
-      "name": "[author]",
-      "email": "[author-email]"
     }
   ],
   "keywords": [
     "alaska airlines",
-    "orion design system",
+    "auro design system",
     "web components",
     "swatch"
   ]

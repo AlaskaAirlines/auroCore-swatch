@@ -1,10 +1,6 @@
-[![Build Status](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-swatch.svg?branch=master)](https://travis-ci.org/AlaskaAirlines/OrionStatelessComponents__ods-swatch)
-![npm (scoped)](https://img.shields.io/npm/v/@alaskaairux/ods-swatch.svg?color=orange)
-![NPM](https://img.shields.io/npm/l/@alaskaairux/ods-swatch.svg?color=blue)
+# auro-swatch
 
-# \<ods-swatch>
-
-`<ods-swatch>` is a UI component for the display of color information containing styling and behavior.
+`<auro-swatch>` is a UI component for the display of color information containing styling and behavior.
 
 ## Docs
 
@@ -12,61 +8,30 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 
 ## Install
 
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/ods-swatch.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/ods-swatch)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/ods-swatch.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/ods-swatch)
+[![License](https://img.shields.io/npm/l/@alaskaairux/ods-swatch.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+
 ```shell
 $ npm i @alaskaairux/ods-swatch
 ```
 
 ### Design Token CSS Custom Property dependency
 
-The use of any ODS Component has a dependency on the [ODS Design Tokens (npm install)](https://www.npmjs.com/package/@alaskaairux/orion-design-tokens). See repository and API information [here](https://github.com/AlaskaAirlines/OrionDesignTokens).
+The use of any Auro Component has a dependency on the [Auro Design Tokens (npm install)](https://www.npmjs.com/package/@alaskaairux/orion-design-tokens). See repository and API information [here](https://github.com/AlaskaAirlines/AuroDesignTokenss).
 
-For additional details in regards to using Orion Design Tokens with components, please see [./docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/OrionStatelessComponents__docs/blob/master/docs/TECH_DETAILS.md)
+For additional details in regards to using Auro Design Tokens with components, please see [./docs/TECH_DETAILS.md](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md)
 
 ### CSS Custom Property fallbacks
 
-CSS Custom Properties are not supported in older browsers. For this, fallback properties are pre-generated and included with the npm. Any update to the Orion Design Tokens will be immediately reflected with browsers that support CSS Custom Properties, legacy browsers will require updated components with pre-generated fallback properties.
+CSS Custom Properties are not supported in older browsers. For this, fallback properties are pre-generated and included with the npm. Any update to the Auro Design Tokens will be immediately reflected with browsers that support CSS Custom Properties, legacy browsers will require updated components with pre-generated fallback properties.
 
 ### Define dependency in project component
 
-Define the component dependency within each component that is using the \<ods-swatch> component.
+Define the component dependency within each component that is using the `<auro-swatch>` component.
 
 ```javascript
-import "@alaskaairux/ods-swatch";
-```
-
-**Reference component in HTML**
-
-```html
-<ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
-```
-
-## Element ods-swatch
-
-```javascript
-class OdsSwatch extends ComponentBase
-```
-
-### ods-swatch use cases
-
-The `<ods-swatch>` element should be used in situations where users may:
-
-* Need to illustrate a Design Token color and its related data in a block swatch format.
-* Supports display of color as background color
-* Lists JSON token value; CSS custom property; Sass variable; HEX value
-
-### Properties:
-
-| Attribute | Value type | Description |
-|----|----|----|
-| backgroundcolor | string | pass in hex color value to be illustrated in the color swatch |
-| colorname | string | derived color name based on JSON structure from design tokens |
-
-### Code Examples
-
-Default swatch
-
-```html
-<ods-swatch backgroundcolor="01426a" colorname="ColorBrandBlueMidnightBase"></ods-swatch>
+import "@alaskaairux/auro-swatch";
 ```
 
 ## Element auro-token-list
@@ -182,8 +147,3 @@ The `<auro-color-avatar>` element should be used in situations where users may:
 <auro-color-avatar avatartype="alert" colorname="color-alert-success-on-light"></auro-color-avatar>
 <auro-color-avatar avatartype="alert" ondark colorname="color-alert-success-on-dark"></auro-color-avatar>
 ```
-
-##
-
-Alaska Airlines Orion Design System<br>
-Copyright 2019 Alaska Airlines, Inc. or its affiliates. All Rights Reserved.
