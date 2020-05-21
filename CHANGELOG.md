@@ -1,5 +1,24 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-swatch/compare/v1.2.5...v2.0.0) (2020-05-21)
+
+
+### Bug Fixes
+
+* update auro references ([8c68d40](https://github.com/AlaskaAirlines/auro-swatch/commit/8c68d4064f1ce0c0ebeac5de100a5e397c4c350a))
+* update table UI ([edc0b46](https://github.com/AlaskaAirlines/auro-swatch/commit/edc0b46a78a7b302b1507b8f77fb3102da52e775))
+
+
+### Features
+
+* remove ods swatch and update repo for auro ([9650d35](https://github.com/AlaskaAirlines/auro-swatch/commit/9650d351e3f5aef994d2545acc5176f7780163e2))
+
+
+### BREAKING CHANGES
+
+* This pr will remove support for the unused ods-swatch
+and move towards Auro use cases.
+
 ## [1.2.5](https://github.com/AlaskaAirlines/OrionStatelessComponents__ods-swatch/compare/v1.2.4...v1.2.5) (2020-05-20)
 
 
