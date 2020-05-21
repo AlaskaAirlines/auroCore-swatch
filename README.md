@@ -8,12 +8,12 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/ods-swatch.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/ods-swatch)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/ods-swatch.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/ods-swatch)
-[![License](https://img.shields.io/npm/l/@alaskaairux/ods-swatch.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-swatch.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-swatch)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-swatch.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-swatch)
+[![License](https://img.shields.io/npm/l/@alaskaairux/auro-swatch.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
-$ npm i @alaskaairux/ods-swatch
+$ npm i @alaskaairux/auro-swatch
 ```
 
 ### Design Token CSS Custom Property dependency
@@ -37,7 +37,7 @@ import "@alaskaairux/auro-swatch";
 ## Element auro-token-list
 
 ```javascript
-class AuroTokenList extends ComponentBase 
+class AuroTokenList extends ComponentBase
 ```
 
 ### auro-token-list use cases
@@ -71,7 +71,7 @@ The `<auro-token-list>` element should be used in situations where users may:
 ## Element auro-swatch-list
 
 ```javascript
-class AuroSwatchList extends ComponentBase 
+class AuroSwatchList extends ComponentBase
 ```
 
 ### auro-swatch-list use cases
@@ -112,7 +112,7 @@ The `<auro-swatch-list>` element should be used in situations where users may:
 ## Element auro-color-avatar
 
 ```javascript
-class AuroColorAvatar extends ComponentBase 
+class AuroColorAvatar extends ComponentBase
 ```
 
 ### auro-color-avatar use cases
