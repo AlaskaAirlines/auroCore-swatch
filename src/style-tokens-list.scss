@@ -53,15 +53,15 @@
     font-weight: 200;
   }
 
+  th,
+  td {
+    padding: var(--auro-size-md) var(--auro-size-xxl) var(--auro-size-sm) var(--auro-size-sm);
+  }
+
   th {
     border-bottom: 1px solid var(--auro-color-border-primary-on-light);
     color: var(--auro-color-text-secondary-on-light);
-    padding: 0 0 var(--auro-size-sm);
     white-space: nowrap;
-  }
-
-  td {
-    padding: var(--auro-size-md) var(--auro-size-xxl) var(--auro-size-sm) 0;
   }
 
   thead {
