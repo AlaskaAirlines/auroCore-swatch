@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.0...v2.0.1) (2020-05-21)
+
+
+### Bug Fixes
+
+* adjust th,td padding ([20faa19](https://github.com/AlaskaAirlines/auro-swatch/commit/20faa191a756e38cc0bf13698f388d976b1c9e80))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-swatch/compare/v1.2.5...v2.0.0) (2020-05-21)
 
 
