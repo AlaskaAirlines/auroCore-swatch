@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.2](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.1...v2.0.2) (2020-05-28)
+
+
+### Bug Fixes
+
+* update ui spec ([7ca4d76](https://github.com/AlaskaAirlines/auro-swatch/commit/7ca4d76e5f4617b4d42d4ecf31ff2c33cfda901b))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.0...v2.0.1) (2020-05-21)
 
 
