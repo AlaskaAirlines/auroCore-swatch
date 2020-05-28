@@ -28,6 +28,8 @@ export default class ComponentBase extends LitElement {
         return `Auro${camelCase(name)}`
       case 'sass':
         return `$auro-${name}`
+      case 'standard':
+        return `--auro-${name}`
       default:
         return `{${name.replace(/-/gu, ".")}.value}`
     }

@@ -27,7 +27,7 @@ class AuroSwatchList extends ComponentBase {
             <th>Token</th>
             <th class="">Usage</th>
             <th>Hex/RGBA</th>
-            <th class="center">Swatch</th>
+            <th class="center">Color</th>
             <th class="noPadding">WCAG rating</th>
           </tr>
         </thead>
@@ -35,8 +35,7 @@ class AuroSwatchList extends ComponentBase {
           ${this.componentData.map((index) => html`
             <tr>
               <td class="noWrap varList">
-                <b>CSS</b>: ${this.varName(index.colorname, 'css')}<br>
-                <b>Sass</b>: ${this.varName(index.colorname, 'sass')}
+                ${this.varName(index.colorname, 'css')}
               </td>
               <td>${index.usage}</td>
               <td class="noWrap">${index.backgroundcolor}</td>

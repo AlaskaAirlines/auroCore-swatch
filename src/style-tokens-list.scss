@@ -82,3 +82,10 @@
 .center {
   text-align: center;
 }
+
+.swatch {
+  width: 100px;
+  height: 15px;
+  outline: 1px solid var(--auro-color-base-neutral-400);
+  outline-offset: 4px;
+}

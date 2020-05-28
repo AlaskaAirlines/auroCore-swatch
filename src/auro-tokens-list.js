@@ -4,6 +4,7 @@
 // ---------------------------------------------------------------------
 
 import { html } from "lit-element";
+import { classMap } from 'lit-html/directives/class-map';
 import ComponentBase from './component-base';
 import swatchStyleCss from "./style-tokens-list-css.js";
 
@@ -14,7 +15,8 @@ class AuroTokensList extends ComponentBase {
       ...super.properties,
       componentData:    { type: Array },
       deprecated:       { type: Boolean },
-      unit:             { type: String }
+      unit:             { type: String },
+      swatch:           { type: Boolean}
     };
   }
 
@@ -38,6 +40,11 @@ class AuroTokensList extends ComponentBase {
 
   // Adds styles for light DOM element; styles not defined in base class
   render() {
+
+    const classes = {
+      'swatch': this.swatch
+    }
+
     return html`
       ${swatchStyleCss}
 
@@ -70,6 +77,7 @@ class AuroTokensList extends ComponentBase {
             <tr>
               <th>Token name</th>
               <th>Value</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
@@ -80,6 +88,12 @@ class AuroTokensList extends ComponentBase {
                 </td>
                 <td class="noWrap">
                   ${index.tokenvalue}${this.size(index.token)}
+                </td>
+                <td>
+                  <div
+                    class="${classMap(classes)}"
+                    style="background-color: ${this.varName(index.token, 'css')}">
+                  </div>
                 </td>
               </tr>
             `)}
