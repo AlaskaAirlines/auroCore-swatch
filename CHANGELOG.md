@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.3](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.2...v2.0.3) (2020-06-03)
+
+
+### Bug Fixes
+
+* update header styles ([f04cd7c](https://github.com/AlaskaAirlines/auro-swatch/commit/f04cd7c5ced92bcd2d710507e5d03093e510d85e))
+
 ## [2.0.2](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.1...v2.0.2) (2020-05-28)
 
 
