@@ -16,7 +16,8 @@ class AuroTokensList extends ComponentBase {
       componentData:    { type: Array },
       deprecated:       { type: Boolean },
       unit:             { type: String },
-      swatch:           { type: Boolean}
+      swatch:           { type: Boolean},
+      circle:           { type: Boolean}
     };
   }
 
@@ -42,7 +43,8 @@ class AuroTokensList extends ComponentBase {
   render() {
 
     const classes = {
-      'swatch': this.swatch
+      'swatch': this.swatch,
+      'swatch--circle': this.circle
     }
 
     return html`
