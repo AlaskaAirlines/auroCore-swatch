@@ -21,15 +21,15 @@ export default class ComponentBase extends LitElement {
       case 'deprecated':
         return `var(--${name})`;
       case 'css':
-        return `var(--auro-${name})`
+        return `var(--${name})`
       case 'droid':
-        return `auro_${name.replace(/-/gu, "_")}`
+        return `${name.replace(/-/gu, "_")}`
       case 'ios':
-        return `Auro${camelCase(name)}`
+        return `${camelCase(name)}`
       case 'sass':
-        return `$auro-${name}`
+        return `$${name}`
       case 'standard':
-        return `--auro-${name}`
+        return `--${name}`
       default:
         return `{${name.replace(/-/gu, ".")}.value}`
     }
@@ -39,7 +39,7 @@ export default class ComponentBase extends LitElement {
     const
       blueBeginIndex = 4,
       blueMultiplier = 0.114,
-      darkColor = `var(--color-base-white)`,
+      darkColor = `var(--auro-color-text-primary-on-dark)`,
       darknessThreshold = 186,
       getColorCode = (color) => {
         const
@@ -59,7 +59,7 @@ export default class ComponentBase extends LitElement {
 
         return parseInt(colorCode.substring(beginIndex, beginIndex + endIndex), hexValue) * multiplier;
       },
-      lightColor = `var(--color-base-orca)`,
+      lightColor = `var(--auro-color-text-primary-on-light)`,
       redBeginIndex = 0,
       redMultiplier = 0.299;
 
