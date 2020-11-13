@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.5](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.4...v2.0.5) (2020-11-13)
+
+
+### Bug Fixes
+
+* update variable naming template ([821f9c1](https://github.com/AlaskaAirlines/auro-swatch/commit/821f9c11cb6f437e8b8e522888654ccb2bbcbe40))
+
 ## [2.0.4](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.3...v2.0.4) (2020-06-05)
 
 
