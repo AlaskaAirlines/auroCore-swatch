@@ -39,7 +39,7 @@ class AuroSwatchList extends ComponentBase {
               </td>
               <td>${index.usage}</td>
               <td class="noWrap">${index.backgroundcolor}</td>
-              <td class="swatch"><div style="background-color: var(--auro-${index.colorname})"></div></td>
+              <td class="swatch"><div style="background-color: var(--${index.colorname})"></div></td>
               <td class="center noPadding">${index.wcag}</td>
             </tr>
           `)}
