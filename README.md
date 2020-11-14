@@ -8,7 +8,7 @@ All information regarding Project Setup, Technical Details, Tests and informatio
 
 ## Install
 
-[![Build Status](https://img.shields.io/travis/AlaskaAirlines/auro-swatch.svg?branch=master&style=for-the-badge)](https://travis-ci.org/github/AlaskaAirlines/auro-swatch)
+[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-swatch/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-swatch/actions?query=workflow%3A%22test+and+publish%22)
 [![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-swatch.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux/auro-swatch)
 [![License](https://img.shields.io/npm/l/@alaskaairux/auro-swatch.svg?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 

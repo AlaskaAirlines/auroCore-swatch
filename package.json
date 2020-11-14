@@ -79,8 +79,7 @@
     "stylelint": "^13.5.0",
     "stylelint-config-standard": "^20.0.0",
     "wc-sass-render": "^1.2.3",
-    "wct-mocha": "^1.1.0",
-    "yaml-lint": "^1.2.4"
+    "wct-mocha": "^1.1.0"
   },
   "watch": {
     "buildTokens": "./src/*.json",
@@ -104,8 +103,7 @@
     "sassRender-w": "sass-render -w src/**/*.{scss,css}",
     "serve": "polymer serve --port 3001 --hostname 0.0.0.0",
     "sweep": "rm -rf ./altImports ./temp ./demo/css ./demo/fonts ./dist ./src/tokens | rm ./demo/sass/*token*.scss ./src/*.css ./src/*-css.js",
-    "test": "npm-run-all esLint cssLint jsonLint yamltest",
-    "yamltest": "yamllint .travis.yml",
+    "test": "npm-run-all esLint cssLint jsonLint",
     "processSrc": "gulp processSrc",
     "preserveTokens": "copyfiles -u 1 -V './src/**/componentProperties.scss' ./dist"
   },
