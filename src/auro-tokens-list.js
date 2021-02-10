@@ -15,6 +15,7 @@ class AuroTokensList extends ComponentBase {
       ...super.properties,
       componentData:    { type: Array },
       deprecated:       { type: Boolean },
+      version:          { type: String },
       unit:             { type: String },
       swatch:           { type: Boolean},
       circle:           { type: Boolean}
@@ -39,6 +40,14 @@ class AuroTokensList extends ComponentBase {
     return ''
   }
 
+  deprecatedType(value) {
+    if (value) {
+      return `auro`
+    }
+
+    return `deprecated`
+  }
+
   // Adds styles for light DOM element; styles not defined in base class
   render() {
 
@@ -57,6 +66,10 @@ class AuroTokensList extends ComponentBase {
             <tr>
               <th>Deprecated token</th>
               <th class="">Current Token</th>
+              ${this.version
+                ? html`<th>Version</th>`
+                : html``
+              }
               <th>Value</th>
             </tr>
           </thead>
@@ -64,9 +77,14 @@ class AuroTokensList extends ComponentBase {
             ${this.componentData.map((index) => html`
               <tr class="tableRow">
                 <td class="noWrap varList">
-                  ${this.varName(index.token, 'deprecated')}
+                  ${this.varName(index.token, this.deprecatedType(index.version))}
                 </td>
                 ${html`<td class="noWrap">${this.currentToken(index.reference)}</td>`}
+
+                ${this.version
+                  ? html`<td class="noWrap">${index.version}</td>`
+                  : html``
+                }
                 <td class="noWrap">${index.tokenvalue}</td>
               </tr>
             `)}

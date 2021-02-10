@@ -18,6 +18,8 @@ export default class ComponentBase extends LitElement {
     }
 
     switch (type) {
+      case 'auro':
+        return `var(--auro-${name})`;
       case 'deprecated':
         return `var(--${name})`;
       case 'css':
