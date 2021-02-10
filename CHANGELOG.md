@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.5...v2.1.0) (2021-02-10)
+
+
+### Features
+
+* update token list to support version data ([cce4c14](https://github.com/AlaskaAirlines/auro-swatch/commit/cce4c147edfeb05113d1460ed1ea3bd81e40497d))
+
 ## [2.0.5](https://github.com/AlaskaAirlines/auro-swatch/compare/v2.0.4...v2.0.5) (2020-11-13)
 
 
